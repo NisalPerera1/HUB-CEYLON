@@ -14,6 +14,10 @@
     #addColor {
         margin-left: auto;
     }
+    .selected-color {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
 </style>
 @section('content')
 <div class="container">
@@ -88,12 +92,86 @@
                             <input type="number" name="age_limits" id="age_limits" class="form-control" required>
                         </div>
                         
-                    
-                        <!-- Color -->
-                        <div class="form-group">
-                            <label for="color">Colors:</label>
-                            <input type="text" class="form-control" id="color" name="color" placeholder="Enter colors separated by commas">
-                        </div>
+{{--                     
+<!-- Color -->
+<div class="form-group">
+    <label for="colors">Available Colors:</label>
+    <div class="color-input-group">
+        <input type="text" class="form-control color-input" name="color" id="colorInput" placeholder="Enter a color">
+        <button type="button" id="addColor" class="btn btn-primary ml-2">Add Color</button>
+    </div>
+    <div id="selectedColors" class="mt-2 d-flex flex-wrap"></div>
+</div>
+
+
+                        <script>
+// Add new color input field
+$('#addColor').click(function() {
+    var color = $('#colorInput').val();
+    if (color.trim() !== '') {
+        $('#selectedColors').append('<div class="selected-color">' + color + '<button type="button" class="btn btn-sm btn-danger remove-color ml-2">Remove</button></div>');
+        $('#colorInput').val('');
+    }
+});
+
+// Remove color input field
+$(document).on('click', '.remove-color', function() {
+    $(this).parent('.selected-color').remove();
+});
+
+
+
+                        </script> --}}
+<!-- Color -->
+<div class="form-group">
+    <label for="colors">Available Colors:</label>
+    <div class="color-input-group">
+        <input type="text" class="form-control color-input" id="colorInput" name="color" placeholder="Enter a color">
+        <button type="button" id="addColor" class="btn btn-primary ml-2">Add Color</button>
+    </div>
+    <div id="selectedColors" class="mt-2 d-flex flex-wrap"></div>
+    <input type="hidden" name="color" id="colorsInput" value="">
+</div>
+
+
+<script>
+   // Initialize an array to store colors
+var colors = [];
+
+// Add new color input field
+$('#addColor').click(function() {
+    var color = $('#colorInput').val().trim();
+    if (color !== '') {
+        colors.push(color); // Add color to the array
+        updateSelectedColors(); // Update the displayed colors
+        updateColorsInput(); // Update the hidden input field value
+        $('#colorInput').val('');
+    }
+});
+
+// Remove color input field
+$(document).on('click', '.remove-color', function() {
+    var index = $(this).parent('.selected-color').index();
+    colors.splice(index, 1); // Remove color from the array
+    updateSelectedColors(); // Update the displayed colors
+    updateColorsInput(); // Update the hidden input field value
+});
+
+// Function to update the displayed colors
+function updateSelectedColors() {
+    $('#selectedColors').empty();
+    colors.forEach(function(color) {
+        $('#selectedColors').append('<div class="selected-color">' + color + '<button type="button" class="btn btn-sm btn-danger remove-color ml-2">Remove</button></div>');
+    });
+}
+
+// Function to update the hidden input field value
+function updateColorsInput() {
+    $('#colorsInput').val(JSON.stringify(colors));
+}
+
+</script>
+
                         
                     
                         <!-- Images -->

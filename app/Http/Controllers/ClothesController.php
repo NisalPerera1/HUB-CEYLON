@@ -34,7 +34,6 @@ class ClothesController extends Controller
             'goods_or_services' => 'required|string',
             'unit_of_measure' => 'required|string',
             'color' => 'required|string',
-
             'size' => 'required|string',
             'age_limits' => 'required|string',
             'return_exchange_policy' => 'required|string',
@@ -48,8 +47,8 @@ class ClothesController extends Controller
     
 
 // Split the input string into an array of colors
-$colors = explode(',', $request->input('color'));
-
+// $colors = $request->input('color') ? array_map('trim', $request->input('color')) : [];
+// $colorsString = implode(',', $colors);
           // Store the images in the 'clothes_images' folder
     $imagePaths = [];
     if ($request->hasFile('images')) {
@@ -69,8 +68,7 @@ $colors = explode(',', $request->input('color'));
             'gender' => $request->input('gender'),
             'goods_or_services' => $request->input('goods_or_services'),
             'unit_of_measure' => $request->input('unit_of_measure'),
-            'color' => $request->input('color'),
-            
+            'color' => $request->input('color'),      
             'size' => $request->input('size'),
             'age_limits' => $request->input('age_limits'),
             'return_exchange_policy' => $request->input('return_exchange_policy'),

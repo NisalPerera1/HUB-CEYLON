@@ -60,7 +60,7 @@
                                     <td>
                                         @if ($cloth->images)
     @foreach (json_decode($cloth->images) as $image)
-        <img src="{{ asset($image) }}" alt="Cloth Image" style="max-width: 48px;">
+        <img src="{{ asset($image) }}" alt="Cloth Image" style="max-width: 58px;">
     @endforeach
 @else
     <p>No images available</p>
@@ -69,8 +69,7 @@
 
                                     </td>
                                     <td>
-                                        <a href="{{ route('clothes.show', $cloth->id) }}" class="btn btn-primary">View</a>
-                                        <a href="{{ route('clothes.edit', $cloth->id) }}" class="btn btn-secondary">Edit</a>
+                                        <a href="{{ route('clothes.edit', $cloth->id) }}" class="btn btn-primary">Edit</a>
                                     </td>
                                 </tr>
                             @endforeach
