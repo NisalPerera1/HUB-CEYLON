@@ -183,19 +183,51 @@ function updateColorsInput() {
                     
                         <!-- Size -->
                         <div class="form-group">
-                            <label for="size">Size</label>
-                            <select name="size" id="size" class="form-control" required>
-                                <option value="XXS">XXS</option>
-                                <option value="XS">XS</option>
-                                <option value="S">S</option>
-                                <option value="M">M</option>
-                                <option value="L">L</option>
-                                <option value="XL">XL</option>
-                                <option value="XXL">XXL</option>
-                                <option value="XXXL">XXXL</option>
-                                <option value="Other">Other</option>
-                            </select>
+                            <label for="sizes">Available Sizes:</label>
+                            <div class="size-input-group">
+                                <input type="text" class="form-control size-input" id="sizeInput" name="size" placeholder="Enter a size">
+                                <button type="button" id="addSize" class="btn btn-primary ml-2">Add Size</button>
+                            </div>
+                            <div id="selectedSizes" class="mt-2 d-flex flex-wrap"></div>
+                            <input type="hidden" name="size" id="sizesInput" value="">
                         </div>
+                        <script>
+                            // Initialize an array to store sizes
+                         var sizes = [];
+                         
+                         // Add new size input field
+                         $('#addSize').click(function() {
+                             var size = $('#sizeInput').val().trim();
+                             if (size !== '') {
+                                 sizes.push(size); // Add size to the array
+                                 updateSelectedSizes(); // Update the displayed sizes
+                                 updateSizesInput(); // Update the hidden input field value
+                                 $('#sizeInput').val('');
+                             }
+                         });
+                         
+                         // Remove size input field
+                         $(document).on('click', '.remove-size', function() {
+                             var index = $(this).parent('.selected-size').index();
+                             sizes.splice(index, 1); // Remove size from the array
+                             updateSelectedSizes(); // Update the displayed sizes
+                             updateSizesInput(); // Update the hidden input field value
+                         });
+                         
+                         // Function to update the displayed sizes
+                         function updateSelectedSizes() {
+                             $('#selectedSizes').empty();
+                             sizes.forEach(function(size) {
+                                 $('#selectedSizes').append('<div class="selected-size">' + size + '<button type="button" class="btn btn-sm btn-danger remove-size ml-2">Remove</button></div>');
+                             });
+                         }
+                         
+                         // Function to update the hidden input field value
+                         function updateSizesInput() {
+                             $('#sizesInput').val(JSON.stringify(sizes));
+                         }
+                         
+                         </script>
                     
                         <!-- Measurements -->
                         <!-- Assuming this is auto-generated and not entered by the user -->
