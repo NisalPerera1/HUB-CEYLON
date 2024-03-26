@@ -1,0 +1,251 @@
+.seller {
+    /* min-height: 100vh; */
+}
+
+    .seller .top-bar {
+        height: 7vh;
+        display: flex;
+        align-items: center;
+        background-color: var(--white);
+    }
+
+        .seller .top-bar .nav-list ul {
+            list-style: none;
+            display: flex;
+            gap: 10px;
+            padding: 0;
+            margin: 0;
+            align-items: center;
+        }
+
+            .seller .top-bar .nav-list ul li {
+                display: block;
+                padding: 8px 25px;
+                padding-left: 0;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                font-weight: 600;
+                color: var(--secondary);
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+                .seller .top-bar .nav-list ul li.active {
+                    color: var(--dark);
+                }
+
+                .seller .top-bar .nav-list ul li:hover {
+                    color: var(--dark);
+                }
+
+.seller-banner {
+    padding: 30px 0;
+    border-top: 1px solid var(--light);
+    border-bottom: 1px solid var(--light);
+}
+
+    .seller-banner .seller-logo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 1px solid var(--light);
+        overflow: hidden;
+    }
+
+        .seller-banner .seller-logo img {
+            width: 100%;
+        }
+
+    .seller-banner .brand-name {
+        display: flex;
+    }
+
+        .seller-banner .brand-name .icon {
+            margin-left: 10px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--blue);
+            background-color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .seller-banner .brand-name .icon i {
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                background-color: var(--blue);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+                .seller-banner .brand-name .icon i .fa {
+                    font-size: 12px;
+                }
+
+    .seller-banner .follow-btn {
+        width: 150px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background-color: var(--primary);
+        font-size: 14px;
+        transition: 0.5s;
+        color: var(--light);
+        letter-spacing: 1px;
+    }
+
+        .seller-banner .follow-btn:hover {
+            background-color: var(--hov-primary);
+        }
+
+    .seller-banner .member {
+        padding: 0 35px;
+        border-right: 1px solid var(--secondary);
+        margin-right: 5%;
+    }
+
+        .seller-banner .member span {
+            font-size: 10px;
+            color: var(--secondary);
+        }
+
+        .seller-banner .member h6 {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+
+#top-selling {
+    display: none;
+}
+
+#coupons {
+    display: none;
+}
+
+#all-products {
+    display: none;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-radius: 0;
+    border-bottom: 0;
+    background-color: var(--white);
+    color: var(--dark);
+    font-weight: 600;
+}
+
+.all-products .accordion-button:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+.all-products .accordion-collapse {
+    border-top: 0;
+    font-size: 14px;
+}
+
+    .all-products .accordion-collapse ul li {
+        margin-top: 2%;
+        height: 30px;
+    }
+
+.all-products #ratings .ratings {
+    gap: 10px;
+}
+
+    .all-products #ratings .ratings i {
+        color: var(--gray);
+    }
+
+#brands .brand-item-image {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    #brands .brand-item-image img {
+        width: 100%;
+    }
+
+#brands .brand-item {
+    transition: 0.5s;
+    border: 1px solid transparent;
+}
+
+    #brands .brand-item:hover {
+        border: 1px solid var(--hov-primary);
+    }
+
+.all-products .all-product-items .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+    .all-products .all-product-items .grid-container .grid-items {
+        border: 1px solid var(--light);
+        border-right: 0;
+        border-bottom: 0;
+        transition: 0.5s;
+    }
+
+        .all-products .all-product-items .grid-container .grid-items:nth-child(3n) {
+            border-right: 1px solid var(--light);
+        }
+
+        .all-products .all-product-items .grid-container .grid-items:nth-last-child(-n+3):last-child {
+            border-bottom: 1px solid var(--light);
+        }
+
+        .all-products .all-product-items .grid-container .grid-items:nth-last-child(-n+3):not(:last-child) {
+            border-bottom: 1px solid var(--light);
+        }
+
+        .all-products .all-product-items .grid-container .grid-items:hover {
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+
+
+@media(max-width: 900px) {
+    .seller .top-bar .nav-list ul li {
+        font-size: 12px;
+        padding: 8px 5px;
+    }
+
+    .seller .top-bar {
+        justify-content: center;
+    }
+
+    .seller-banner .member {
+        padding: 0 15px;
+    }
+
+    .filter-all-pro {
+        display: none;
+    }
+
+    .all-products .all-product-items .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+
+        .all-products .all-product-items .grid-container .grid-items {
+            border: 1px solid var(--light);
+            border-bottom: 0;
+        }
+
+            .all-products .all-product-items .grid-container .grid-items:last-child {
+                border-bottom: 1px solid var(--light);
+            }
+
+            .all-products .all-product-items .grid-container .grid-items:nth-last-child(-n+3):not(:last-child) {
+                border-bottom: 0;
+            }
+}

@@ -1,0 +1,100 @@
+.cart-page {
+    margin-top: 2%;
+}
+
+    .cart-page .cart-item {
+        font-size: 14px;
+    }
+
+        .cart-page .cart-item .actions a {
+            color: var(--hov-primary);
+        }
+
+        .cart-page .cart-item .cart-item-img {
+            height: 25vh;
+            width: 100%;
+            border: 1px solid var(--light);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+            .cart-page .cart-item .cart-item-img img {
+                width: 100%;
+            }
+
+        .cart-page .cart-item .strong {
+            font-weight: bold;
+            color: var(--dark);
+        }
+
+            .cart-page .cart-item .strong.name {
+                height: 34px;
+                line-height: 17px;
+                overflow: hidden;
+            }
+
+        .cart-page .cart-item .normal {
+            font-weight: 500;
+            color: var(--gray);
+        }
+
+            .cart-page .cart-item .normal input {
+                width: 100%;
+                border: 2px solid var(--light);
+                border-radius: 3px;
+                transition: 0.5s;
+            }
+
+                .cart-page .cart-item .normal input:focus {
+                    outline: none;
+                    border: 2px solid var(--hov-primary);
+                }
+
+    .cart-page .summary .promo-code input[type=text] {
+        width: 65%;
+        padding: 8px 15px;
+        border: 2px solid var(--light);
+        transition: 0.5s;
+    }
+
+        .cart-page .summary .promo-code input[type=text]:focus {
+            outline: none;
+            border: 2px solid var(--hov-primary);
+        }
+
+    .cart-page .summary .promo-code input[type=submit] {
+        width: 30%;
+        padding: 8px 15px;
+        border: none;
+        border: 2px solid var(--hov-primary);
+        background-color: var(--hov-primary);
+        color: var(--white);
+        font-size: 14px;
+        transition: 0.5s;
+    }
+
+    .cart-page .summary {
+        font-size: 14px;
+    }
+
+        .cart-page .summary .promo-code input[type=submit]:hover {
+            background: var(--primary);
+        }
+
+        .cart-page .summary .chekout-btn {
+            padding: 8px 15px;
+            border: none;
+            border: 2px solid var(--hov-primary);
+            background-color: var(--hov-primary);
+            color: var(--white);
+            font-size: 14px;
+            display: flex;
+            gap: 10px;
+            transition: 0.5s;
+        }
+
+            .cart-page .summary .chekout-btn:hover {
+                background: var(--primary);
+            }

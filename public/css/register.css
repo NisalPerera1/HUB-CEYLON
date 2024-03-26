@@ -1,0 +1,200 @@
+.register {
+    min-height: 100vh;
+    margin-top: 2%;
+}
+
+    .register .register-image {
+        background-size: cover;
+        background-image: url('https://demo.activeitzone.com/ecommerce/public/uploads/all/WAd0LqlAMim6s9LWLc7kwOkSZK2HcnrjPCJKf1FM.webp');
+    }
+
+    .register .register-content {
+        border: 1px solid var(--light);
+    }
+
+    .register .register-form h4 {
+        color: var(--hov-primary);
+        font-weight: 600;
+    }
+
+    .register .register-form p {
+        font-size: 14px;
+        color: var(--dark);
+    }
+
+    .register .register-form label {
+        font-weight: 600;
+        margin-bottom: 3%;
+    }
+
+    .register .register-form input[type=tel] {
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid var(--light);
+        transition: 0.5s;
+        height: 7vh;
+        font-size: 14px;
+    }
+
+    .register .register-form input[type=email] {
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid var(--light);
+        transition: 0.5s;
+        height: 7vh;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    .register .register-form input[type=text] {
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid var(--light);
+        transition: 0.5s;
+        height: 7vh;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+    .register .register-form input[type=password] {
+        width: 100%;
+        background-color: transparent;
+        border: 2px solid var(--light);
+        transition: 0.5s;
+        height: 7vh;
+        font-size: 14px;
+        padding-left: 10px;
+    }
+
+        .register .register-form input[type=tel]:focus,
+        .register .register-form input[type=text]:focus,
+        .register .register-form input[type=email]:focus,
+        .register .register-form input[type=password]:focus {
+            outline: none;
+            border: 2px solid var(--primary);
+        }
+
+input::placeholder {
+    color: var(--secondary);
+}
+
+.iti__flag-container {
+    margin-right: 10%;
+}
+
+.iti.iti--allow-dropdown {
+    width: 100%;
+}
+
+.register-form .use-email-or-phone {
+    color: var(--hov-primary);
+    transition: 0.5s;
+    font-size: 14px;
+}
+
+    .register-form .use-email-or-phone:hover {
+        text-decoration: underline;
+    }
+
+.register-form #register-phone {
+    display: none;
+}
+
+.register-form .forgot-password {
+    color: var(--secondary);
+    text-decoration: underline;
+    transition: 1s;
+}
+
+    .register-form .forgot-password:hover {
+        color: var(--hov-primary);
+    }
+
+.register-form .form-check-label {
+    color: var(--secondary);
+    padding-left: 10px;
+    transition: 1s;
+    margin-top: 2px;
+}
+
+    .register-form .form-check-label:hover {
+        color: var(--hov-primary);
+    }
+
+.register-form .form-check-input {
+    width: 15px;
+    height: 15px;
+}
+
+.register-form .register-btn {
+    margin-top: 10%;
+    width: 100%;
+    background-color: var(--hov-primary);
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--light);
+    border: none;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+    .register-form .register-btn:hover {
+        background-color: var(--primary);
+    }
+
+.register-form .copy-credentials {
+    width: 100%;
+    height: 100%;
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    color: var(--white);
+    transition: 0.5s;
+}
+
+    .register-form .copy-credentials:hover {
+        background-color: var(--hov-blue);
+    }
+
+.register-form .social a img {
+    transition: 0.5s;
+    width: 35px;
+    height: 35px;
+}
+
+    .register-form .social a img:hover {
+        margin-top: -5px;
+    }
+
+.register-form .dont-have {
+    font-size: 12px;
+}
+
+.register-form .login-now {
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+    transition: 0.8s;
+    font-size: 14px;
+    color: var(--hov-primary);
+}
+
+    .register-form .login-now::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 1px;
+        width: 0;
+        transition: width 0.8s ease;
+        background-color: var(--hov-primary);
+    }
+
+    .register-form .login-now:hover {
+        color: var(--hov-primary);
+    }
+
+        .register-form .login-now:hover:before {
+            width: 100%;
+        }

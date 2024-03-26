@@ -1,0 +1,71 @@
+:root {
+    --blue: #3691f2;
+    --hov-blue: #1f6dc2;
+    --gray: #9d9da6;
+    --gray-dark: #8d8d8d;
+    --secondary: #919199;
+    --soft-secondary: rgba(145, 145, 153, 0.15);
+    --success: #85b567;
+    --soft-success: rgba(133, 181, 103, 0.15);
+    --warning: #f3af3d;
+    --soft-warning: rgba(243, 175, 61, 0.15);
+    --light: #f5f5f5;
+    --soft-light: #dfdfe6;
+    --soft-white: #b5b5bf;
+    --dark: #292933;
+    --soft-dark: #1b1b28;
+    --primary: #d00a06;
+    --hov-primary: #D43533;
+    --soft-primary: rgba(208, 9, 6, 0.15);
+    --white: #ffffff;
+    --border: #ededf2;
+    --primary-overlay: rgb(208, 10, 6, 0.1);
+    --blue: #007bff;
+    --hov-blue: #1f6dc2;
+    --soft-blue: rgba(0, 123, 255, 0.15);
+    --secondary-base: #ffc519;
+    --hov-secondary-base: #dbaa17;
+    --soft-secondary-base: rgba(255, 197, 25, 0.15);
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --info: #25bcf1;
+    --soft-info: rgba(37, 188, 241, 0.15);
+    --danger: #ef486a;
+    --soft-danger: rgba(239, 72, 106, 0.15);
+    --light: #f2f3f8;
+    --dark: #111723;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+.tagify {
+    --tags-border-color: #dfdfe6;
+    --tag-bg: #e2e5ec;
+    --tag-hover: #d9e6ff;
+    --tag-text-color: #212529;
+    --tag-text-color--edit: #212529;
+    --tag-pad: 0.3rem 0.5rem;
+    --tag-inset-shadow-size: 1.1em;
+    --tag-invalid-color: #d39494;
+    --tag-invalid-bg: rgba(253, 57, 75, 0.5);
+    --tag-remove-bg: rgba(253, 57, 75, 0.3);
+    --tag-remove-btn-bg: none;
+    --tag-remove-btn-bg--hover: #fd394b;
+    --tag--min-width: 1ch;
+    --tag--max-width: auto;
+    --tag-hide-transition: 0.3s;
+    --loader-size: 0.8em;
+}
