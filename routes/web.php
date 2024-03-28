@@ -74,4 +74,5 @@ Route::post('seller/clothes', [ClothesController::class, 'store'])->name('clothe
 Route::get('seller/clothes/{clothes}', [ClothesController::class, 'show'])->name('clothes.show');
 Route::get('seller/clothes/{clothes}/edit', [ClothesController::class, 'edit'])->name('clothes.edit');
 Route::put('seller/clothes/{clothes}', [ClothesController::class, 'update'])->name('clothes.update');
+
 Route::delete('seller/clothes/{clothes}', [ClothesController::class, 'destroy'])->name('clothes.destroy');
